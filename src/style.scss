@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: theme('fontFamily.main_font');
+}
+
+main{
+    background-color: theme('colors.main');
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: repeat(8, auto);
+}
+.headerLine1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.secTitle{
+    display: flex;
+    justify-content: space-between;
+
+    .secTitleArrow{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+
+
+.petitBonhomme{
+    box-sizing: border-box;
+    border: 1px solid theme('colors.orange');
+    border-radius: 25px;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: theme('colors.white');
+    box-shadow: 2px 8px 30px rgba(37, 33, 32, 0.06);
+    border-radius: 20px;
+    background-repeat: no-repeat;
+
+        .cardBonhomme{
+            display: flex;
+        }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .footerLine2{
+        display: flex;
+        align-items: center;
+
+        .footerNav{
+            display: flex;
+        }
+    }
+    
+    
+}
+.loupe{
+    width:  40px;
+    height: 42px;
+    right: 12px;
+    margin-top: 7px;
+}
+.background{
+    background-image: url(../public/img/header.png);
+    background-size: cover;
+}
+.buttonGradient{
+    position: relative;
+    
+     &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 30px; 
+        padding: 3px; 
+        background:linear-gradient(to left, theme('colors.gradient-blue'), theme('colors.gradient-purple'), theme('colors.gradient-coral'), theme('colors.gradient-red'));
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude; 
+      }
+    
+}
+
+.textGradient{
+    background:linear-gradient(to left, theme('colors.gradient-blue'), theme('colors.gradient-purple'), theme('colors.gradient-coral'), theme('colors.gradient-red'));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
